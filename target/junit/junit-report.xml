@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="13" time="135.666">
-    <testcase classname="MeetSky login feature" name="User enters valid credentials contains at least 2, at most 15 characters." time="18.588">
+<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="3" time="52.377">
+    <testcase classname="MeetSky logout feature." name="User enters valid credentials contains at least 2, at most 15 characters." time="19.116">
         <system-out>
             <![CDATA[Given user is on the login page of MeetSky application......................passed
 When user enters below "Employee21" and "Employee123".......................passed
@@ -9,109 +9,22 @@ Then user should see the dashboard page.....................................pass
 ]]>
         </system-out>
     </testcase>
-    <testcase classname="MeetSky login feature" name="User enters credentials less than 2 characters" time="9.188">
+    <testcase classname="MeetSky logout feature." name="User can log out and ends up in login page." time="16.539">
         <system-out>
-            <![CDATA[Given user is on the login page of MeetSky application......................passed
-When user enters below "E" and "Employee123"................................passed
-And user clicks Log in button...............................................passed
-Then user should see Wrong username or password message.....................passed
+            <![CDATA[Given user is on the dashboard page.........................................passed
+When user clicks the profile button as shown with letter E..................passed
+And user clicks the Log out button from the dropdown menu...................passed
+Then user should see the login page.........................................passed
 ]]>
         </system-out>
     </testcase>
-    <testcase classname="MeetSky login feature" name="User enters credentials less than 2 characters 2" time="12.148">
+    <testcase classname="MeetSky logout feature." name="User can not go to home page again by clicking step back button after successfully logged out." time="16.263">
         <system-out>
-            <![CDATA[Given user is on the login page of MeetSky application......................passed
-When user enters below "Employee21" and "E".................................passed
-And user clicks Log in button...............................................passed
-Then user should see Wrong username or password message.....................passed
-]]>
-        </system-out>
-    </testcase>
-    <testcase classname="MeetSky login feature" name="User enters credentials less than 2 characters 3" time="11.391">
-        <system-out>
-            <![CDATA[Given user is on the login page of MeetSky application......................passed
-When user enters below "E" and "E"..........................................passed
-And user clicks Log in button...............................................passed
-Then user should see Wrong username or password message.....................passed
-]]>
-        </system-out>
-    </testcase>
-    <testcase classname="MeetSky login feature" name="User enters credentials more than 15 characters" time="8.832">
-        <system-out>
-            <![CDATA[Given user is on the login page of MeetSky application......................passed
-When user enters below "Employee21Employee21Employee21" and "Employee123"...passed
-And user clicks Log in button...............................................passed
-Then user should see Wrong username or password message.....................passed
-]]>
-        </system-out>
-    </testcase>
-    <testcase classname="MeetSky login feature" name="User enters credentials more than 15 characters 2" time="10.015">
-        <system-out>
-            <![CDATA[Given user is on the login page of MeetSky application......................passed
-When user enters below "Employee21" and "Employee123Employee123Employee123".passed
-And user clicks Log in button...............................................passed
-Then user should see Wrong username or password message.....................passed
-]]>
-        </system-out>
-    </testcase>
-    <testcase classname="MeetSky login feature" name="User enters credentials more than 15 characters 3" time="11.573">
-        <system-out>
-            <![CDATA[Given user is on the login page of MeetSky application......................passed
-When user enters below "Employee21Employee21Employee21" and "Employee123Employee123Employee123".passed
-And user clicks Log in button...............................................passed
-Then user should see Wrong username or password message.....................passed
-]]>
-        </system-out>
-    </testcase>
-    <testcase classname="MeetSky login feature" name="User does not enter any credentials" time="9.159">
-        <system-out>
-            <![CDATA[Given user is on the login page of MeetSky application......................passed
-When user enters below "" and "Employee123".................................passed
-And user clicks Log in button...............................................passed
-Then user should see Please fill out this field message.....................passed
-]]>
-        </system-out>
-    </testcase>
-    <testcase classname="MeetSky login feature" name="User does not enter any credentials 2" time="9.704">
-        <system-out>
-            <![CDATA[Given user is on the login page of MeetSky application......................passed
-When user enters below "Employee21" and ""..................................passed
-And user clicks Log in button...............................................passed
-Then user should see Please fill out this field message.....................passed
-]]>
-        </system-out>
-    </testcase>
-    <testcase classname="MeetSky login feature" name="User does not enter any credentials 3" time="9.459">
-        <system-out>
-            <![CDATA[Given user is on the login page of MeetSky application......................passed
-When user enters below "" and ""............................................passed
-And user clicks Log in button...............................................passed
-Then user should see Please fill out this field message.....................passed
-]]>
-        </system-out>
-    </testcase>
-    <testcase classname="MeetSky login feature" name="User should see the password in form of dots and should see the password explicitly if needed." time="9.114">
-        <system-out>
-            <![CDATA[Given user is on the login page of MeetSky application......................passed
-When user enters below "Employee21" and "Employee123".......................passed
-Then user should see password in form of dots...............................passed
-When user clicks the eye button.............................................passed
-Then user should see password explicitly....................................passed
-]]>
-        </system-out>
-    </testcase>
-    <testcase classname="MeetSky login feature" name="User should see &quot;Forgot password?&quot; link on the login page and can see &quot;Reset Password&quot; button on the next page after clicking on forget password link." time="7.935">
-        <system-out>
-            <![CDATA[Given user is on the login page of MeetSky application......................passed
-When user clicks Forgot password? link......................................passed
-Then user should see the page contains Reset Password button................passed
-]]>
-        </system-out>
-    </testcase>
-    <testcase classname="MeetSky login feature" name="User should see valid placeholders for Username and Password fields." time="8.041">
-        <system-out>
-            <![CDATA[Given user is on the login page of MeetSky application......................passed
-Then user should see correct Username and Password placeholders.............passed
+            <![CDATA[Given user is on the dashboard page.........................................passed
+When user clicks the profile button as shown with letter E..................passed
+And user clicks the Log out button from the dropdown menu...................passed
+And from the login page user clicks the step back button....................passed
+Then user should not see the dashboard page again...........................passed
 ]]>
         </system-out>
     </testcase>

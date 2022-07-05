@@ -1,4 +1,6 @@
 @MTSK-388
+
+  @LoginFeature
 Feature: MeetSky login feature
   User story: As a user, I should be able to login with correct credentials.
   And home page should be displayed.
