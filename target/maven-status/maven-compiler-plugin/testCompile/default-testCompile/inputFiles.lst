@@ -1,0 +1,12 @@
+/Users/kaya/IdeaProjects/MeetSky/src/test/java/com/mtsky/pages/MeetSkyLoginPage.java
+/Users/kaya/IdeaProjects/MeetSky/src/test/java/com/mtsky/runners/CukesRunner.java
+/Users/kaya/IdeaProjects/MeetSky/src/test/java/com/mtsky/utilities/ConfigurationReader.java
+/Users/kaya/IdeaProjects/MeetSky/src/test/java/com/mtsky/pages/MeetSkyDashboardPage.java
+/Users/kaya/IdeaProjects/MeetSky/src/test/java/com/mtsky/pages/MeetSkyResetPage.java
+/Users/kaya/IdeaProjects/MeetSky/src/test/java/com/mtsky/utilities/Hooks.java
+/Users/kaya/IdeaProjects/MeetSky/src/test/java/com/mtsky/utilities/Driver.java
+/Users/kaya/IdeaProjects/MeetSky/src/test/java/com/mtsky/pages/UploadEditDeleteFilePage.java
+/Users/kaya/IdeaProjects/MeetSky/src/test/java/com/mtsky/stepDefinitions/UploadEditDeleteFileStepDefinitions.java
+/Users/kaya/IdeaProjects/MeetSky/src/test/java/com/mtsky/stepDefinitions/LoginFeatureStepDefs.java
+/Users/kaya/IdeaProjects/MeetSky/src/test/java/com/mtsky/stepDefinitions/LogoutFeatureStepDef.java
+/Users/kaya/IdeaProjects/MeetSky/src/test/java/com/mtsky/utilities/BrowserUtils.java

@@ -1,30 +1,30 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="3" time="52.377">
-    <testcase classname="MeetSky logout feature." name="User enters valid credentials contains at least 2, at most 15 characters." time="19.116">
+<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="32.049">
+    <testcase classname="MeetSky login feature" name="User can copy more than one folder to a folder" time="31.333">
         <system-out>
-            <![CDATA[Given user is on the login page of MeetSky application......................passed
-When user enters below "Employee21" and "Employee123".......................passed
-And user clicks Log in button...............................................passed
-Then user should see the dashboard page.....................................passed
-]]>
-        </system-out>
-    </testcase>
-    <testcase classname="MeetSky logout feature." name="User can log out and ends up in login page." time="16.539">
-        <system-out>
-            <![CDATA[Given user is on the dashboard page.........................................passed
-When user clicks the profile button as shown with letter E..................passed
-And user clicks the Log out button from the dropdown menu...................passed
-Then user should see the login page.........................................passed
-]]>
-        </system-out>
-    </testcase>
-    <testcase classname="MeetSky logout feature." name="User can not go to home page again by clicking step back button after successfully logged out." time="16.263">
-        <system-out>
-            <![CDATA[Given user is on the dashboard page.........................................passed
-When user clicks the profile button as shown with letter E..................passed
-And user clicks the Log out button from the dropdown menu...................passed
-And from the login page user clicks the step back button....................passed
-Then user should not see the dashboard page again...........................passed
+            <![CDATA[Given the user is on the login page.........................................passed
+And the user enters the correct credentials.................................passed
+Given user is on the Files module of MeetSky application, and dashboard page does not have any file..passed
+When user clicks the plus icon top left of the page.........................passed
+And user clicks the New Folder section from the dropdown menu...............passed
+And user enters a folder name and clicks enter..............................passed
+And user clicks the plus icon top left of the page..........................passed
+And user clicks the New Folder section from the dropdown menu...............passed
+And user enters another folder name and clicks enter........................passed
+And user turns back to the dashboard........................................passed
+And user clicks the plus icon top left of the page..........................passed
+And user clicks the New Folder section from the dropdown menu...............passed
+And user enters a different folder name and clicks enter....................passed
+And user turns back to the dashboard........................................passed
+And user refreshes the page.................................................passed
+And user selects the checkbox near to that folders..........................passed
+And user clicks the Actions dropdown menu...................................passed
+And user selects Move or Copy file option...................................passed
+And user sees the new page..................................................passed
+And user clicks the folder..................................................passed
+And user selects copy option................................................passed
+And user opens the folder...................................................passed
+Then user see that newly created folders are there..........................passed
 ]]>
         </system-out>
     </testcase>

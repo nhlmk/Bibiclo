@@ -14,7 +14,7 @@ import org.junit.runner.RunWith;
         features = "src/test/resources/features",
         glue = "com/mtsky/stepDefinitions",
         dryRun = false,
-        tags =  "@LogoutFeature"
+        tags = "@CopyMultipleFolderToAFolder"
 
 )
 
