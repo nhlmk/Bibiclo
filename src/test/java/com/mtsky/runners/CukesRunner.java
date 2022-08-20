@@ -14,9 +14,10 @@ import org.junit.runner.RunWith;
         features = "src/test/resources/features",
         glue = "com/mtsky/stepDefinitions",
         dryRun = false,
-        tags = "@CopyMultipleFolderToAFolder"
+        tags = "@UploadEditDeleteFileFeature"
 
 )
 
 public class CukesRunner {
 }
+//tags = "@MTSK-487"

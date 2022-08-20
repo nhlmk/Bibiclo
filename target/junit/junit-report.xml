@@ -1,6 +1,351 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="32.049">
-    <testcase classname="MeetSky login feature" name="User can copy more than one folder to a folder" time="31.333">
+<testsuite errors="0" failures="1" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="27" time="892.156">
+    <testcase classname="MeetSky login feature" name="User can upload a file" time="26.344">
+        <system-out>
+            <![CDATA[Given the user is on the login page.........................................passed
+And the user enters the correct credentials.................................passed
+Given user is on the Files module of MeetSky application, and dashboard page does not have any file..passed
+When user clicks the plus icon top left of the page.........................passed
+And user clicks the upload file section from the dropdown menu..............passed
+And user enters the source of file to upload and clicks okay button.........passed
+Then user should see the source of file under the Files module..............passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="MeetSky login feature" name="User can create a new folder" time="19.378">
+        <system-out>
+            <![CDATA[Given the user is on the login page.........................................passed
+And the user enters the correct credentials.................................passed
+Given user is on the Files module of MeetSky application, and dashboard page does not have any file..passed
+When user clicks the plus icon top left of the page.........................passed
+And user clicks the New Folder section from the dropdown menu...............passed
+And user enters a folder name and clicks enter..............................passed
+Then user should see the created folder under the Files module..............passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="MeetSky login feature" name="User can create a new text document" time="19.605">
+        <system-out>
+            <![CDATA[Given the user is on the login page.........................................passed
+And the user enters the correct credentials.................................passed
+Given user is on the Files module of MeetSky application, and dashboard page does not have any file..passed
+When user clicks the plus icon top left of the page.........................passed
+And user clicks the New Text Document section from the dropdown menu........passed
+And user enters a text document name and clicks enter.......................passed
+Then user should see the created text document in the title.................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="MeetSky login feature" name="User can not create a new folder with existing name" time="21.813">
+        <system-out>
+            <![CDATA[Given the user is on the login page.........................................passed
+And the user enters the correct credentials.................................passed
+Given user is on the Files module of MeetSky application, and dashboard page does not have any file..passed
+When user clicks the plus icon top left of the page.........................passed
+And user clicks the New Folder section from the dropdown menu...............passed
+And user enters a folder name and clicks enter..............................passed
+And user clicks the plus icon top left of the page..........................passed
+And user clicks the New Folder section from the dropdown menu...............passed
+And user enters a folder name and clicks enter..............................passed
+Then user should see the alert says it already exists.......................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="MeetSky login feature" name="User can not create a new text document with existing name" time="22.288">
+        <system-out>
+            <![CDATA[Given the user is on the login page.........................................passed
+And the user enters the correct credentials.................................passed
+Given user is on the Files module of MeetSky application, and dashboard page does not have any file..passed
+When user clicks the plus icon top left of the page.........................passed
+And user clicks the New Text Document section from the dropdown menu........passed
+And user enters a text document name and clicks enter.......................passed
+And user clicks the close button............................................passed
+And user clicks the plus icon top left of the page..........................passed
+And user clicks the New Text Document section from the dropdown menu........passed
+And user enters a text document name and clicks enter.......................passed
+Then user should see the alert says the text document already exists........passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="MeetSky login feature" name="User can not create a new folder name with / this character" time="18.82">
+        <system-out>
+            <![CDATA[Given the user is on the login page.........................................passed
+And the user enters the correct credentials.................................passed
+Given user is on the Files module of MeetSky application, and dashboard page does not have any file..passed
+When user clicks the plus icon top left of the page.........................passed
+And user clicks the New Folder section from the dropdown menu...............passed
+And user enters a folder name includes slash punctuation....................passed
+Then user should see the alert says that slash punctuation is not allowed inside a file name.passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="MeetSky login feature" name="User can not create a new text document name with / this character" time="18.073">
+        <system-out>
+            <![CDATA[Given the user is on the login page.........................................passed
+And the user enters the correct credentials.................................passed
+Given user is on the Files module of MeetSky application, and dashboard page does not have any file..passed
+When user clicks the plus icon top left of the page.........................passed
+And user clicks the New Text Document section from the dropdown menu........passed
+And user enters a text document name includes slash punctuation.............passed
+Then user should see the alert says that slash punctuation is not allowed inside a file name.passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="MeetSky login feature" name="User can not create a new folder name with dot punctuation" time="112.988">
+        <system-out>
+            <![CDATA[Given the user is on the login page.........................................passed
+And the user enters the correct credentials.................................passed
+Given user is on the Files module of MeetSky application, and dashboard page does not have any file..passed
+When user clicks the plus icon top left of the page.........................passed
+And user clicks the New Folder section from the dropdown menu...............passed
+And user enters a folder name includes dot punctuation......................passed
+Then user should see the alert says that dot punctuation is an invalid file name.passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="MeetSky login feature" name="User can not create a new text document name with dot punctuation" time="23.75">
+        <system-out>
+            <![CDATA[Given the user is on the login page.........................................passed
+And the user enters the correct credentials.................................passed
+Given user is on the Files module of MeetSky application, and dashboard page does not have any file..passed
+When user clicks the plus icon top left of the page.........................passed
+And user clicks the New Text Document section from the dropdown menu........passed
+And user enters a text document name includes dot punctuation...............passed
+Then user should see the alert says that dot punctuation is not allowed inside a file name.passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="MeetSky login feature" name="User can not create a new folder without name" time="19.665">
+        <system-out>
+            <![CDATA[Given the user is on the login page.........................................passed
+And the user enters the correct credentials.................................passed
+Given user is on the Files module of MeetSky application, and dashboard page does not have any file..passed
+When user clicks the plus icon top left of the page.........................passed
+And user clicks the New Folder section from the dropdown menu...............passed
+And user deletes given name in the new folder input and clicks enter........passed
+Then user should see the alert says that file name cannot be empty..........passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="MeetSky login feature" name="User can not create a new text document without name" time="19.756">
+        <system-out>
+            <![CDATA[Given the user is on the login page.........................................passed
+And the user enters the correct credentials.................................passed
+Given user is on the Files module of MeetSky application, and dashboard page does not have any file..passed
+When user clicks the plus icon top left of the page.........................passed
+And user clicks the New Text Document section from the dropdown menu........passed
+And user deletes given name in the new text document input and clicks enter.passed
+Then user should see the alert says that text document name cannot be empty.passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="MeetSky login feature" name="User can move a text document to a folder" time="32.069">
+        <system-out>
+            <![CDATA[Given the user is on the login page.........................................passed
+And the user enters the correct credentials.................................passed
+Given user is on the Files module of MeetSky application, and dashboard page does not have any file..passed
+When user clicks the plus icon top left of the page.........................passed
+And user clicks the New Folder section from the dropdown menu...............passed
+And user enters a folder name and clicks enter..............................passed
+And user clicks the plus icon top left of the page..........................passed
+And user clicks the New Text Document section from the dropdown menu........passed
+And user enters a text document name and clicks enter.......................passed
+And user turns back to the dashboard........................................passed
+And user refreshes the page.................................................passed
+And user selects the checkbox near to that text document....................passed
+And user clicks the Actions dropdown menu...................................passed
+And user selects Move or Copy file option...................................passed
+And user sees the new page..................................................passed
+And user clicks the folder..................................................passed
+And user selects move option................................................passed
+And user opens the folder...................................................passed
+Then user see that the text file is there...................................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="MeetSky login feature" name="User can copy a text document to a folder" time="33.388">
+        <system-out>
+            <![CDATA[Given the user is on the login page.........................................passed
+And the user enters the correct credentials.................................passed
+Given user is on the Files module of MeetSky application, and dashboard page does not have any file..passed
+When user clicks the plus icon top left of the page.........................passed
+And user clicks the New Folder section from the dropdown menu...............passed
+And user enters a folder name and clicks enter..............................passed
+And user clicks the plus icon top left of the page..........................passed
+And user clicks the New Text Document section from the dropdown menu........passed
+And user enters a text document name and clicks enter.......................passed
+And user turns back to the dashboard........................................passed
+And user refreshes the page.................................................passed
+And user selects the checkbox near to that text document....................passed
+And user clicks the Actions dropdown menu...................................passed
+And user selects Move or Copy file option...................................passed
+And user sees the new page..................................................passed
+And user clicks the folder..................................................passed
+And user selects copy option................................................passed
+And user opens the folder...................................................passed
+Then user see that the text file is there...................................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="MeetSky login feature" name="User can move more than one text document to a folder" time="32.06">
+        <system-out>
+            <![CDATA[Given the user is on the login page.........................................passed
+And the user enters the correct credentials.................................passed
+Given user is on the Files module of MeetSky application, and dashboard page does not have any file..passed
+When user clicks the plus icon top left of the page.........................passed
+And user clicks the New Folder section from the dropdown menu...............passed
+And user enters a folder name and clicks enter..............................passed
+And user clicks the plus icon top left of the page..........................passed
+And user clicks the New Text Document section from the dropdown menu........passed
+And user enters a text document name and clicks enter.......................passed
+And user turns back to the dashboard........................................passed
+And user clicks the plus icon top left of the page..........................passed
+And user clicks the New Text Document section from the dropdown menu........passed
+And user enters a different text document name and clicks enter.............passed
+And user turns back to the dashboard........................................passed
+And user refreshes the page.................................................passed
+And user selects the checkbox near to that text documents...................passed
+And user clicks the Actions dropdown menu...................................passed
+And user selects Move or Copy file option...................................passed
+And user sees the new page..................................................passed
+And user clicks the folder..................................................passed
+And user selects move option................................................passed
+And user opens the folder...................................................passed
+Then user see that text files are there.....................................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="MeetSky login feature" name="User can copy more than one text document to a folder" time="32.337">
+        <system-out>
+            <![CDATA[Given the user is on the login page.........................................passed
+And the user enters the correct credentials.................................passed
+Given user is on the Files module of MeetSky application, and dashboard page does not have any file..passed
+When user clicks the plus icon top left of the page.........................passed
+And user clicks the New Folder section from the dropdown menu...............passed
+And user enters a folder name and clicks enter..............................passed
+And user clicks the plus icon top left of the page..........................passed
+And user clicks the New Text Document section from the dropdown menu........passed
+And user enters a text document name and clicks enter.......................passed
+And user turns back to the dashboard........................................passed
+And user clicks the plus icon top left of the page..........................passed
+And user clicks the New Text Document section from the dropdown menu........passed
+And user enters a different text document name and clicks enter.............passed
+And user turns back to the dashboard........................................passed
+And user refreshes the page.................................................passed
+And user selects the checkbox near to that text documents...................passed
+And user clicks the Actions dropdown menu...................................passed
+And user selects Move or Copy file option...................................passed
+And user sees the new page..................................................passed
+And user clicks the folder..................................................passed
+And user selects copy option................................................passed
+And user opens the folder...................................................passed
+Then user see that text files are there.....................................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="MeetSky login feature" name="User can move a folder to a folder" time="32.716">
+        <system-out>
+            <![CDATA[Given the user is on the login page.........................................passed
+And the user enters the correct credentials.................................passed
+Given user is on the Files module of MeetSky application, and dashboard page does not have any file..passed
+When user clicks the plus icon top left of the page.........................passed
+And user clicks the New Folder section from the dropdown menu...............passed
+And user enters a folder name and clicks enter..............................passed
+And user turns back to the dashboard........................................passed
+And user clicks the plus icon top left of the page..........................passed
+And user clicks the New Folder section from the dropdown menu...............passed
+And user enters another folder name and clicks enter........................passed
+And user turns back to the dashboard........................................passed
+And user refreshes the page.................................................passed
+And user selects the checkbox near to the newly created folder..............passed
+And user clicks the Actions dropdown menu...................................passed
+And user selects Move or Copy file option...................................passed
+And user sees the new page..................................................passed
+And user clicks the folder..................................................passed
+And user selects move option................................................passed
+And user opens the folder...................................................passed
+Then user see that newly created folder is there............................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="MeetSky login feature" name="User can copy a folder to a folder" time="14.598">
+        <failure message="disconnected: Unable to receive message from renderer&#10;  (Session info: chrome=103.0.5060.134)&#10;Build info: version: '4.1.3', revision: '7b1ebf28ef'&#10;System info: host: 'KAYA-MacBook-Air.local', ip: 'fdec:753e:188:6400:c7c:4636:fbdf:7459%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '11.4', java.version: '11.0.12'&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Command: [2cc3ef233746686e046863d22cea0433, get {url=https://qa.meetsky.net/index.php/login}]&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 103.0.5060.134, chrome: {chromedriverVersion: 103.0.5060.134 (8ec6fce403b..., userDataDir: /var/folders/7d/2t_6nb6n1kq...}, goog:chromeOptions: {debuggerAddress: localhost:51133}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), se:cdp: ws://localhost:51133/devtoo..., se:cdpVersion: 103.0.5060.134, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}&#10;Session ID: 2cc3ef233746686e046863d22cea0433" type="org.openqa.selenium.WebDriverException">
+            <![CDATA[Given the user is on the login page.........................................failed
+And the user enters the correct credentials.................................skipped
+Given user is on the Files module of MeetSky application, and dashboard page does not have any file..skipped
+When user clicks the plus icon top left of the page.........................skipped
+And user clicks the New Folder section from the dropdown menu...............skipped
+And user enters a folder name and clicks enter..............................skipped
+And user turns back to the dashboard........................................skipped
+And user clicks the plus icon top left of the page..........................skipped
+And user clicks the New Folder section from the dropdown menu...............skipped
+And user enters another folder name and clicks enter........................skipped
+And user turns back to the dashboard........................................skipped
+And user refreshes the page.................................................skipped
+And user selects the checkbox near to the newly created folder..............skipped
+And user clicks the Actions dropdown menu...................................skipped
+And user selects Move or Copy file option...................................skipped
+And user sees the new page..................................................skipped
+And user clicks the folder..................................................skipped
+And user selects copy option................................................skipped
+And user opens the folder...................................................skipped
+Then user see that newly created folder is there............................skipped
+
+StackTrace:
+org.openqa.selenium.WebDriverException: disconnected: Unable to receive message from renderer
+  (Session info: chrome=103.0.5060.134)
+Build info: version: '4.1.3', revision: '7b1ebf28ef'
+System info: host: 'KAYA-MacBook-Air.local', ip: 'fdec:753e:188:6400:c7c:4636:fbdf:7459%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '11.4', java.version: '11.0.12'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [2cc3ef233746686e046863d22cea0433, get {url=https://qa.meetsky.net/index.php/login}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 103.0.5060.134, chrome: {chromedriverVersion: 103.0.5060.134 (8ec6fce403b..., userDataDir: /var/folders/7d/2t_6nb6n1kq...}, goog:chromeOptions: {debuggerAddress: localhost:51133}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), se:cdp: ws://localhost:51133/devtoo..., se:cdpVersion: 103.0.5060.134, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 2cc3ef233746686e046863d22cea0433
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:567)
+	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:330)
+	at com.mtsky.stepDefinitions.UploadEditDeleteFileStepDefinitions.theUserIsOnTheLoginPage(UploadEditDeleteFileStepDefinitions.java:23)
+	at ✽.the user is on the login page(file:///Users/kaya/IdeaProjects/MeetSky/src/test/resources/features/UploadEditDeleteFile.feature:6)
+]]>
+        </failure>
+    </testcase>
+    <testcase classname="MeetSky login feature" name="User can move more than one folder to a folder" time="49.766">
+        <system-out>
+            <![CDATA[Given the user is on the login page.........................................passed
+And the user enters the correct credentials.................................passed
+Given user is on the Files module of MeetSky application, and dashboard page does not have any file..passed
+When user clicks the plus icon top left of the page.........................passed
+And user clicks the New Folder section from the dropdown menu...............passed
+And user enters a folder name and clicks enter..............................passed
+And user clicks the plus icon top left of the page..........................passed
+And user clicks the New Folder section from the dropdown menu...............passed
+And user enters another folder name and clicks enter........................passed
+And user turns back to the dashboard........................................passed
+And user clicks the plus icon top left of the page..........................passed
+And user clicks the New Folder section from the dropdown menu...............passed
+And user enters a different folder name and clicks enter....................passed
+And user turns back to the dashboard........................................passed
+And user refreshes the page.................................................passed
+And user selects the checkbox near to that folders..........................passed
+And user clicks the Actions dropdown menu...................................passed
+And user selects Move or Copy file option...................................passed
+And user sees the new page..................................................passed
+And user clicks the folder..................................................passed
+And user selects move option................................................passed
+And user opens the folder...................................................passed
+Then user see that newly created folders are there..........................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="MeetSky login feature" name="User can copy more than one folder to a folder" time="33.602">
         <system-out>
             <![CDATA[Given the user is on the login page.........................................passed
 And the user enters the correct credentials.................................passed
@@ -25,6 +370,213 @@ And user clicks the folder..................................................pass
 And user selects copy option................................................passed
 And user opens the folder...................................................passed
 Then user see that newly created folders are there..........................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="MeetSky login feature" name="User can move both text document and folder to a folder" time="40.345">
+        <system-out>
+            <![CDATA[Given the user is on the login page.........................................passed
+And the user enters the correct credentials.................................passed
+Given user is on the Files module of MeetSky application, and dashboard page does not have any file..passed
+When user clicks the plus icon top left of the page.........................passed
+And user clicks the New Folder section from the dropdown menu...............passed
+And user enters a folder name and clicks enter..............................passed
+And user clicks the plus icon top left of the page..........................passed
+And user clicks the New Text Document section from the dropdown menu........passed
+And user enters a text document name and clicks enter.......................passed
+And user turns back to the dashboard........................................passed
+And user clicks the plus icon top left of the page..........................passed
+And user clicks the New Folder section from the dropdown menu...............passed
+And user enters another folder name and clicks enter........................passed
+And user turns back to the dashboard........................................passed
+And user refreshes the page.................................................passed
+And user selects the checkbox near to another folder and text document......passed
+And user clicks the Actions dropdown menu...................................passed
+And user selects Move or Copy file option...................................passed
+And user sees the new page..................................................passed
+And user clicks the folder..................................................passed
+And user selects move option................................................passed
+And user opens the folder...................................................passed
+Then user see that newly created folder and text document are there.........passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="MeetSky login feature" name="User can copy both text document and folder to a folder" time="38.965">
+        <system-out>
+            <![CDATA[Given the user is on the login page.........................................passed
+And the user enters the correct credentials.................................passed
+Given user is on the Files module of MeetSky application, and dashboard page does not have any file..passed
+When user clicks the plus icon top left of the page.........................passed
+And user clicks the New Folder section from the dropdown menu...............passed
+And user enters a folder name and clicks enter..............................passed
+And user clicks the plus icon top left of the page..........................passed
+And user clicks the New Text Document section from the dropdown menu........passed
+And user enters a text document name and clicks enter.......................passed
+And user turns back to the dashboard........................................passed
+And user clicks the plus icon top left of the page..........................passed
+And user clicks the New Folder section from the dropdown menu...............passed
+And user enters another folder name and clicks enter........................passed
+And user turns back to the dashboard........................................passed
+And user refreshes the page.................................................passed
+And user selects the checkbox near to another folder and text document......passed
+And user clicks the Actions dropdown menu...................................passed
+And user selects Move or Copy file option...................................passed
+And user sees the new page..................................................passed
+And user clicks the folder..................................................passed
+And user selects copy option................................................passed
+And user opens the folder...................................................passed
+Then user see that newly created folder and text document are there.........passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="MeetSky login feature" name="User can delete a folder" time="36.092">
+        <system-out>
+            <![CDATA[Given the user is on the login page.........................................passed
+And the user enters the correct credentials.................................passed
+Given user is on the Files module of MeetSky application, and dashboard page does not have any file..passed
+When user clicks the plus icon top left of the page.........................passed
+And user goes to deleted files page.........................................passed
+And user clicks the select all checkbox in the deleted files page...........passed
+And user clicks the Actions dropdown menu in the deleted files page.........passed
+And user selects delete option in the deleted files page....................passed
+And user turns back to the dashboard........................................passed
+And user clicks the plus icon top left of the page..........................passed
+And user clicks the New Folder section from the dropdown menu...............passed
+And user enters a folder name and clicks enter..............................passed
+And user refreshes the page.................................................passed
+And user selects the three dots dropdown menu belongs to the folder.........passed
+And user selects delete option from three dots dropdown menu................passed
+And user goes to deleted files page.........................................passed
+Then user see the deleted folder there......................................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="MeetSky login feature" name="User can delete more than one folder" time="44.272">
+        <system-out>
+            <![CDATA[Given the user is on the login page.........................................passed
+And the user enters the correct credentials.................................passed
+Given user is on the Files module of MeetSky application, and dashboard page does not have any file..passed
+When user clicks the plus icon top left of the page.........................passed
+And user goes to deleted files page.........................................passed
+And user clicks the select all checkbox in the deleted files page...........passed
+And user clicks the Actions dropdown menu in the deleted files page.........passed
+And user selects delete option in the deleted files page....................passed
+And user turns back to the dashboard........................................passed
+And user clicks the plus icon top left of the page..........................passed
+And user clicks the New Folder section from the dropdown menu...............passed
+And user enters a folder name and clicks enter..............................passed
+And user turns back to the dashboard........................................passed
+And user clicks the plus icon top left of the page..........................passed
+And user clicks the New Folder section from the dropdown menu...............passed
+And user enters another folder name and clicks enter........................passed
+And user refreshes the page.................................................passed
+And user selects the checkbox near to that newly created folders............passed
+And user clicks the Actions dropdown menu...................................passed
+And user selects delete option..............................................passed
+And user goes to deleted files page.........................................passed
+Then user see the deleted folders there.....................................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="MeetSky login feature" name="User can delete a text document" time="39.509">
+        <system-out>
+            <![CDATA[Given the user is on the login page.........................................passed
+And the user enters the correct credentials.................................passed
+Given user is on the Files module of MeetSky application, and dashboard page does not have any file..passed
+When user clicks the plus icon top left of the page.........................passed
+And user goes to deleted files page.........................................passed
+And user clicks the select all checkbox in the deleted files page...........passed
+And user clicks the Actions dropdown menu in the deleted files page.........passed
+And user selects delete option in the deleted files page....................passed
+And user turns back to the dashboard........................................passed
+And user clicks the plus icon top left of the page..........................passed
+And user clicks the New Text Document section from the dropdown menu........passed
+And user enters a text document name and clicks enter.......................passed
+And user clicks the close button............................................passed
+And user turns back to the dashboard........................................passed
+And user selects the three dots dropdown menu belongs to the text document..passed
+And user selects delete option of text document three dots dropdown menu....passed
+And user refreshes the page.................................................passed
+And user goes to deleted files page.........................................passed
+Then user see the deleted text document there...............................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="MeetSky login feature" name="User can delete more than one text document" time="38.928">
+        <system-out>
+            <![CDATA[Given the user is on the login page.........................................passed
+And the user enters the correct credentials.................................passed
+Given user is on the Files module of MeetSky application, and dashboard page does not have any file..passed
+When user clicks the plus icon top left of the page.........................passed
+And user goes to deleted files page.........................................passed
+And user clicks the select all checkbox in the deleted files page...........passed
+And user clicks the Actions dropdown menu in the deleted files page.........passed
+And user selects delete option in the deleted files page....................passed
+And user turns back to the dashboard........................................passed
+And user clicks the plus icon top left of the page..........................passed
+And user clicks the New Text Document section from the dropdown menu........passed
+And user enters a text document name and clicks enter.......................passed
+And user clicks the close button............................................passed
+And user turns back to the dashboard........................................passed
+And user clicks the plus icon top left of the page..........................passed
+And user clicks the New Text Document section from the dropdown menu........passed
+And user enters a different text document name and clicks enter.............passed
+And user clicks the close button............................................passed
+And user turns back to the dashboard........................................passed
+And user refreshes the page.................................................passed
+And user selects the checkbox near to that text documents...................passed
+And user clicks the Actions dropdown menu...................................passed
+And user selects delete option..............................................passed
+And user goes to deleted files page.........................................passed
+Then user see the deleted text documents there..............................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="MeetSky login feature" name="User can delete both of the folder and text documents" time="37.108">
+        <system-out>
+            <![CDATA[Given the user is on the login page.........................................passed
+And the user enters the correct credentials.................................passed
+Given user is on the Files module of MeetSky application, and dashboard page does not have any file..passed
+When user clicks the plus icon top left of the page.........................passed
+And user goes to deleted files page.........................................passed
+And user clicks the select all checkbox in the deleted files page...........passed
+And user clicks the Actions dropdown menu in the deleted files page.........passed
+And user selects delete option in the deleted files page....................passed
+And user turns back to the dashboard........................................passed
+And user clicks the plus icon top left of the page..........................passed
+And user clicks the New Text Document section from the dropdown menu........passed
+And user enters a text document name and clicks enter.......................passed
+And user clicks the close button............................................passed
+And user turns back to the dashboard........................................passed
+And user clicks the plus icon top left of the page..........................passed
+And user clicks the New Folder section from the dropdown menu...............passed
+And user enters a folder name and clicks enter..............................passed
+And user turns back to the dashboard........................................passed
+And user refreshes the page.................................................passed
+And user selects the checkbox near to that folder and text document.........passed
+And user clicks the Actions dropdown menu...................................passed
+And user selects delete option..............................................passed
+And user goes to deleted files page.........................................passed
+Then user see the deleted folder and text document there....................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="MeetSky login feature" name="User can delete both of the folder and text documents 2" time="32.712">
+        <system-out>
+            <![CDATA[Given the user is on the login page.........................................passed
+And the user enters the correct credentials.................................passed
+Given user is on the Files module of MeetSky application, and dashboard page does not have any file..passed
+When user clicks the plus icon top left of the page.........................passed
+And user clicks the New Text Document section from the dropdown menu........passed
+And user enters a text document name and clicks enter.......................passed
+And user clicks the close button............................................passed
+And user turns back to the dashboard........................................passed
+And user clicks the plus icon top left of the page..........................passed
+And user clicks the New Folder section from the dropdown menu...............passed
+And user enters a folder name and clicks enter..............................passed
+And user turns back to the dashboard........................................passed
+And user refreshes the page.................................................passed
+Then user see total number of folders and text documents there..............passed
 ]]>
         </system-out>
     </testcase>
