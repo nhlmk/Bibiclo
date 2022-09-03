@@ -1,13 +1,13 @@
-package com.mtsky.pages;
+package com.bibiclo.pages;
 
-import com.mtsky.utilities.Driver;
+import com.bibiclo.utilities.Driver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class MeetSkyDashboardPage {
+public class BibicloDashboardPage {
 
-    public MeetSkyDashboardPage() {
+    public BibicloDashboardPage() {
         PageFactory.initElements(Driver.getDriver(), this);
     }
 

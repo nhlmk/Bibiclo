@@ -1,4 +1,4 @@
-package com.mtsky.runners;
+package com.bibiclo.runners;
 
 import io.cucumber.junit.Cucumber;
 import io.cucumber.junit.CucumberOptions;
@@ -11,7 +11,7 @@ import org.junit.runner.RunWith;
                 "rerun:target/rerun.txt",
         },
         features = "@target/rerun.txt",
-        glue = "com/mtsky/stepDefinitions"
+        glue = "com/bibiclo/stepDefinitions"
 )
 
 public class FailedTestRunner {

@@ -1,9 +1,9 @@
-package com.mtsky.stepDefinitions;
+package com.bibiclo.stepDefinitions;
 
-import com.mtsky.pages.MeetSkyDashboardPage;
-import com.mtsky.pages.MeetSkyLoginPage;
-import com.mtsky.utilities.ConfigurationReader;
-import com.mtsky.utilities.Driver;
+import com.bibiclo.pages.BibicloDashboardPage;
+import com.bibiclo.pages.BibicloLoginPage;
+import com.bibiclo.utilities.ConfigurationReader;
+import com.bibiclo.utilities.Driver;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -11,31 +11,31 @@ import io.cucumber.java.en.When;
 
 public class LogoutFeatureStepDef {
 
-    MeetSkyLoginPage meetSkyLoginPage = new MeetSkyLoginPage();
-    MeetSkyDashboardPage meetSkyDashboardPage = new MeetSkyDashboardPage();
+    BibicloLoginPage bibicloLoginPage = new BibicloLoginPage();
+    BibicloDashboardPage bibicloDashboardPage = new BibicloDashboardPage();
 
     @Given("user is on the dashboard page.")
     public void userIsOnTheDashboardPage() {
         Driver.getDriver().get(ConfigurationReader.getProperty("MeetSkyLoginPage"));
-        meetSkyLoginPage.usernameInput.sendKeys("Employee21");
-        meetSkyLoginPage.passwordInput.sendKeys("Employee123");
-        meetSkyLoginPage.loginButton.click();
+        bibicloLoginPage.usernameInput.sendKeys("Employee21");
+        bibicloLoginPage.passwordInput.sendKeys("Employee123");
+        bibicloLoginPage.loginButton.click();
 
     }
 
     @When("user clicks the profile button as shown with letter E")
     public void userClicksTheProfileButtonAsShownWithLetterE() {
-        meetSkyDashboardPage.usernameIcon.click();
+        bibicloDashboardPage.usernameIcon.click();
     }
 
     @And("user clicks the Log out button from the dropdown menu")
     public void userClicksTheLogOutButtonFromTheDropdownMenu() {
-        meetSkyDashboardPage.logoutSelection.click();
+        bibicloDashboardPage.logoutSelection.click();
     }
 
     @Then("user should see the login page.")
     public void userShouldSeeTheLoginPage() {
-        meetSkyLoginPage.loginButton.isDisplayed();
+        bibicloLoginPage.loginButton.isDisplayed();
     }
 
     @And("from the login page user clicks the step back button")
@@ -45,6 +45,6 @@ public class LogoutFeatureStepDef {
 
     @Then("user should not see the dashboard page again.")
     public void userShouldNotSeeTheDashboardPageAgain() {
-        meetSkyLoginPage.loginButton.isDisplayed();
+        bibicloLoginPage.loginButton.isDisplayed();
     }
 }

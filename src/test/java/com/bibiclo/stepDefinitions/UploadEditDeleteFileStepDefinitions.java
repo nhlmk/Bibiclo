@@ -1,7 +1,7 @@
-package com.mtsky.stepDefinitions;
+package com.bibiclo.stepDefinitions;
 
-import com.mtsky.pages.UploadEditDeleteFilePage;
-import com.mtsky.utilities.Driver;
+import com.bibiclo.pages.UploadEditDeleteFilePage;
+import com.bibiclo.utilities.Driver;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -9,7 +9,6 @@ import io.cucumber.java.en.When;
 import org.junit.Assert;
 import org.openqa.selenium.*;
 import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;

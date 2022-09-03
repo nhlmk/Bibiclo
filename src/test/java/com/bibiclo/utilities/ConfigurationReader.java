@@ -1,4 +1,4 @@
-package com.mtsky.utilities;
+package com.bibiclo.utilities;
 
 import java.io.FileInputStream;
 import java.io.IOException;

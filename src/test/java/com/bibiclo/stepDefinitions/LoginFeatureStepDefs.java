@@ -1,15 +1,11 @@
-package com.mtsky.stepDefinitions;
+package com.bibiclo.stepDefinitions;
 
-import com.fasterxml.jackson.databind.cfg.ConfigOverride;
-import com.mtsky.pages.MeetSkyLoginPage;
-import com.mtsky.pages.MeetSkyResetPage;
-import com.mtsky.utilities.BrowserUtils;
-import com.mtsky.utilities.ConfigurationReader;
-import com.mtsky.utilities.Driver;
-import com.mtsky.utilities.Hooks;
+import com.bibiclo.pages.BibicloLoginPage;
+import com.bibiclo.pages.BibicloResetPage;
+import com.bibiclo.utilities.BrowserUtils;
+import com.bibiclo.utilities.ConfigurationReader;
+import com.bibiclo.utilities.Driver;
 import io.cucumber.java.After;
-import io.cucumber.java.AfterStep;
-import io.cucumber.java.BeforeStep;
 import io.cucumber.java.Scenario;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
@@ -17,14 +13,13 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
 import org.junit.Before;
-import org.openqa.selenium.Alert;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 
 public class LoginFeatureStepDefs {
 
-    MeetSkyLoginPage meetSkyLoginPage = new MeetSkyLoginPage();
-    MeetSkyResetPage meetSkyResetPage = new MeetSkyResetPage();
+    BibicloLoginPage bibicloLoginPage = new BibicloLoginPage();
+    BibicloResetPage bibicloResetPage = new BibicloResetPage();
 
 
     @Given("user is on the login page of MeetSky application.")
@@ -34,14 +29,14 @@ public class LoginFeatureStepDefs {
 
     @When("user enters below {string} and {string}")
     public void userEntersBelowAnd(String arg0, String arg1) {
-        meetSkyLoginPage.usernameInput.sendKeys(arg0);
-        meetSkyLoginPage.passwordInput.sendKeys(arg1);
+        bibicloLoginPage.usernameInput.sendKeys(arg0);
+        bibicloLoginPage.passwordInput.sendKeys(arg1);
 
     }
 
     @And("user clicks Log in button.")
     public void userClicksButton() {
-        meetSkyLoginPage.loginButton.click();
+        bibicloLoginPage.loginButton.click();
     }
 
     @Then("user should see the dashboard page.")
@@ -54,46 +49,46 @@ public class LoginFeatureStepDefs {
     @Then("user should see Please fill out this field message")
     public void userShouldSeeMessage() {
 
-        Assert.assertTrue(meetSkyLoginPage.passwordInput.getAttribute("validationMessage").equals("Please fill out this field.")
-                ||meetSkyLoginPage.usernameInput.getAttribute("validationMessage").equals("Please fill out this field."));
+        Assert.assertTrue(bibicloLoginPage.passwordInput.getAttribute("validationMessage").equals("Please fill out this field.")
+                || bibicloLoginPage.usernameInput.getAttribute("validationMessage").equals("Please fill out this field."));
 
     }
 
     @Then("user should see password in form of dots.")
     public void userShouldSeePasswordInFormOfDots() {
-        Assert.assertTrue(meetSkyLoginPage.passwordInput.getAttribute("type").equals("password"));
+        Assert.assertTrue(bibicloLoginPage.passwordInput.getAttribute("type").equals("password"));
     }
 
     @When("user clicks the eye button")
     public void userClicksTheEyeButton() {
-        meetSkyLoginPage.eyeButton.click();
+        bibicloLoginPage.eyeButton.click();
     }
 
     @Then("user should see password explicitly.")
     public void userShouldSeePasswordExplicitly() {
-        Assert.assertTrue(meetSkyLoginPage.passwordInput.getAttribute("type").equals("text"));
+        Assert.assertTrue(bibicloLoginPage.passwordInput.getAttribute("type").equals("text"));
     }
 
     @When("user clicks Forgot password? link.")
     public void userClicksLink() {
-        meetSkyLoginPage.ForgotPassword.click();
+        bibicloLoginPage.ForgotPassword.click();
     }
 
     @Then("user should see the page contains Reset Password button.")
     public void userShouldSeeThePageContainsButton() {
-        Assert.assertTrue(meetSkyResetPage.resetPasswordButton.isDisplayed());
+        Assert.assertTrue(bibicloResetPage.resetPasswordButton.isDisplayed());
     }
 
     @Then("user should see correct Username and Password placeholders.")
     public void userShouldSeeAndPlaceholders() {
-        Assert.assertTrue(meetSkyLoginPage.usernameInput.getAttribute("placeholder").contains("Username"));
-        Assert.assertTrue(meetSkyLoginPage.passwordInput.getAttribute("placeholder").contains("Password"));
+        Assert.assertTrue(bibicloLoginPage.usernameInput.getAttribute("placeholder").contains("Username"));
+        Assert.assertTrue(bibicloLoginPage.passwordInput.getAttribute("placeholder").contains("Password"));
 
     }
 
     @Then("user should see Wrong username or password message")
     public void userShouldSeeWrongUsernameOrPasswordMessage() {
-        Assert.assertTrue(meetSkyLoginPage.wrongEmailOrUsername.isDisplayed());
+        Assert.assertTrue(bibicloLoginPage.wrongEmailOrUsername.isDisplayed());
     }
 
     @After

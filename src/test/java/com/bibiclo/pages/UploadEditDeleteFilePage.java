@@ -1,8 +1,7 @@
-package com.mtsky.pages;
+package com.bibiclo.pages;
 
 import com.github.javafaker.Faker;
-import com.mtsky.utilities.Driver;
-import org.openqa.selenium.By;
+import com.bibiclo.utilities.Driver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;

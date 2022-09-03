@@ -1,4 +1,4 @@
-package com.mtsky.runners;
+package com.bibiclo.runners;
 
 import io.cucumber.junit.Cucumber;
 import io.cucumber.junit.CucumberOptions;
@@ -12,7 +12,7 @@ import org.junit.runner.RunWith;
                 "junit:target/junit/junit-report.xml",
                 "rerun:target/rerun.txt",},
         features = "src/test/resources/features",
-        glue = "com/mtsky/stepDefinitions",
+        glue = "com/bibiclo/stepDefinitions",
         dryRun = false,
         tags = "@UploadEditDeleteFileFeature"
 
